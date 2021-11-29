@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct CatalystXPCTestApp: App {
+struct XPCTestApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

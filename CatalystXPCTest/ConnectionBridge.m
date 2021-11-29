@@ -15,7 +15,7 @@
             @protocol(XPCServiceTestProtocol)];
 
     NSXPCConnection *myConnection =    [[NSXPCConnection alloc]
-                                         initWithServiceName:@"com.vonbelow.xpcTest"];
+                                         initWithMachServiceName:@"com.example.monster"];
                                     myConnection.remoteObjectInterface = myCookieInterface;
                                     [myConnection resume];
 }
