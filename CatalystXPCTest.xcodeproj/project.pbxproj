@@ -11,7 +11,34 @@
 		CB036BD32752E3EA004B85C4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB036BD22752E3EA004B85C4 /* ContentView.swift */; };
 		CB036BD52752E3EF004B85C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB036BD42752E3EF004B85C4 /* Assets.xcassets */; };
 		CB036BD82752E3EF004B85C4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB036BD72752E3EF004B85C4 /* Preview Assets.xcassets */; };
+		CB036BE82752E584004B85C4 /* XPCServiceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CB036BE72752E584004B85C4 /* XPCServiceTest.m */; };
+		CB036BEA2752E585004B85C4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CB036BE92752E585004B85C4 /* main.m */; };
+		CB036BF02752E5B7004B85C4 /* XPCServiceTest.xpc in CopyFiles */ = {isa = PBXBuildFile; fileRef = CB036BE32752E584004B85C4 /* XPCServiceTest.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CB036BF72752E72E004B85C4 /* ConnectionBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = CB036BF62752E72E004B85C4 /* ConnectionBridge.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CB036BF12752E5DD004B85C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB036BC52752E3E9004B85C4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CB036BE22752E584004B85C4;
+			remoteInfo = XPCServiceTest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CB036BEF2752E5A2004B85C4 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/XPCServices";
+			dstSubfolderSpec = 16;
+			files = (
+				CB036BF02752E5B7004B85C4 /* XPCServiceTest.xpc in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		CB036BCD2752E3E9004B85C4 /* CatalystXPCTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatalystXPCTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -19,10 +46,28 @@
 		CB036BD22752E3EA004B85C4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CB036BD42752E3EF004B85C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB036BD72752E3EF004B85C4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CB036BDE2752E420004B85C4 /* CatalystXPCTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CatalystXPCTest.entitlements; sourceTree = "<group>"; };
+		CB036BE32752E584004B85C4 /* XPCServiceTest.xpc */ = {isa = PBXFileReference; explicitFileType = "wrapper.xpc-service"; includeInIndex = 0; path = XPCServiceTest.xpc; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB036BE52752E584004B85C4 /* XPCServiceTestProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPCServiceTestProtocol.h; sourceTree = "<group>"; };
+		CB036BE62752E584004B85C4 /* XPCServiceTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPCServiceTest.h; sourceTree = "<group>"; };
+		CB036BE72752E584004B85C4 /* XPCServiceTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPCServiceTest.m; sourceTree = "<group>"; };
+		CB036BE92752E585004B85C4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CB036BEB2752E585004B85C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB036BF32752E62E004B85C4 /* XPCServiceTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XPCServiceTest.entitlements; sourceTree = "<group>"; };
+		CB036BF42752E72E004B85C4 /* CatalystXPCTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CatalystXPCTest-Bridging-Header.h"; sourceTree = "<group>"; };
+		CB036BF52752E72E004B85C4 /* ConnectionBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConnectionBridge.h; sourceTree = "<group>"; };
+		CB036BF62752E72E004B85C4 /* ConnectionBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConnectionBridge.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		CB036BCA2752E3E9004B85C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB036BE02752E584004B85C4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -36,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				CB036BCF2752E3EA004B85C4 /* CatalystXPCTest */,
+				CB036BE42752E584004B85C4 /* XPCServiceTest */,
 				CB036BCE2752E3E9004B85C4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				CB036BCD2752E3E9004B85C4 /* CatalystXPCTest.app */,
+				CB036BE32752E584004B85C4 /* XPCServiceTest.xpc */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -51,10 +98,14 @@
 		CB036BCF2752E3EA004B85C4 /* CatalystXPCTest */ = {
 			isa = PBXGroup;
 			children = (
+				CB036BDE2752E420004B85C4 /* CatalystXPCTest.entitlements */,
 				CB036BD02752E3EA004B85C4 /* CatalystXPCTestApp.swift */,
 				CB036BD22752E3EA004B85C4 /* ContentView.swift */,
+				CB036BF52752E72E004B85C4 /* ConnectionBridge.h */,
+				CB036BF62752E72E004B85C4 /* ConnectionBridge.m */,
 				CB036BD42752E3EF004B85C4 /* Assets.xcassets */,
 				CB036BD62752E3EF004B85C4 /* Preview Content */,
+				CB036BF42752E72E004B85C4 /* CatalystXPCTest-Bridging-Header.h */,
 			);
 			path = CatalystXPCTest;
 			sourceTree = "<group>";
@@ -67,6 +118,19 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		CB036BE42752E584004B85C4 /* XPCServiceTest */ = {
+			isa = PBXGroup;
+			children = (
+				CB036BF32752E62E004B85C4 /* XPCServiceTest.entitlements */,
+				CB036BE52752E584004B85C4 /* XPCServiceTestProtocol.h */,
+				CB036BE62752E584004B85C4 /* XPCServiceTest.h */,
+				CB036BE72752E584004B85C4 /* XPCServiceTest.m */,
+				CB036BE92752E585004B85C4 /* main.m */,
+				CB036BEB2752E585004B85C4 /* Info.plist */,
+			);
+			path = XPCServiceTest;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,15 +141,34 @@
 				CB036BC92752E3E9004B85C4 /* Sources */,
 				CB036BCA2752E3E9004B85C4 /* Frameworks */,
 				CB036BCB2752E3E9004B85C4 /* Resources */,
+				CB036BEF2752E5A2004B85C4 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				CB036BF22752E5DD004B85C4 /* PBXTargetDependency */,
 			);
 			name = CatalystXPCTest;
 			productName = CatalystXPCTest;
 			productReference = CB036BCD2752E3E9004B85C4 /* CatalystXPCTest.app */;
 			productType = "com.apple.product-type.application";
+		};
+		CB036BE22752E584004B85C4 /* XPCServiceTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB036BEC2752E585004B85C4 /* Build configuration list for PBXNativeTarget "XPCServiceTest" */;
+			buildPhases = (
+				CB036BDF2752E584004B85C4 /* Sources */,
+				CB036BE02752E584004B85C4 /* Frameworks */,
+				CB036BE12752E584004B85C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XPCServiceTest;
+			productName = XPCServiceTest;
+			productReference = CB036BE32752E584004B85C4 /* XPCServiceTest.xpc */;
+			productType = "com.apple.product-type.xpc-service";
 		};
 /* End PBXNativeTarget section */
 
@@ -98,6 +181,10 @@
 				LastUpgradeCheck = 1310;
 				TargetAttributes = {
 					CB036BCC2752E3E9004B85C4 = {
+						CreatedOnToolsVersion = 13.1;
+						LastSwiftMigration = 1310;
+					};
+					CB036BE22752E584004B85C4 = {
 						CreatedOnToolsVersion = 13.1;
 					};
 				};
@@ -116,6 +203,7 @@
 			projectRoot = "";
 			targets = (
 				CB036BCC2752E3E9004B85C4 /* CatalystXPCTest */,
+				CB036BE22752E584004B85C4 /* XPCServiceTest */,
 			);
 		};
 /* End PBXProject section */
@@ -130,6 +218,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CB036BE12752E584004B85C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -138,11 +233,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB036BD32752E3EA004B85C4 /* ContentView.swift in Sources */,
+				CB036BF72752E72E004B85C4 /* ConnectionBridge.m in Sources */,
 				CB036BD12752E3EA004B85C4 /* CatalystXPCTestApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CB036BDF2752E584004B85C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB036BEA2752E585004B85C4 /* main.m in Sources */,
+				CB036BE82752E584004B85C4 /* XPCServiceTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CB036BF22752E5DD004B85C4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CB036BE22752E584004B85C4 /* XPCServiceTest */;
+			targetProxy = CB036BF12752E5DD004B85C4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		CB036BD92752E3EF004B85C4 /* Debug */ = {
@@ -266,6 +379,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = CatalystXPCTest/CatalystXPCTest.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CatalystXPCTest/Preview Content\"";
@@ -277,6 +392,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -284,7 +400,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.vonbelow.CatalystXPCTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "CatalystXPCTest/CatalystXPCTest-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -295,6 +414,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = CatalystXPCTest/CatalystXPCTest.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CatalystXPCTest/Preview Content\"";
@@ -306,6 +427,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -313,9 +435,57 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.vonbelow.CatalystXPCTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "CatalystXPCTest/CatalystXPCTest-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CB036BED2752E585004B85C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = XPCServiceTest/XPCServiceTest.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M3DTZN9V9B;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = XPCServiceTest/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = XPCServiceTest;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				MACOSX_DEPLOYMENT_TARGET = 11.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vonbelow.XPCServiceTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Debug;
+		};
+		CB036BEE2752E585004B85C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = XPCServiceTest/XPCServiceTest.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M3DTZN9V9B;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = XPCServiceTest/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = XPCServiceTest;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				MACOSX_DEPLOYMENT_TARGET = 11.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vonbelow.XPCServiceTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 			};
 			name = Release;
 		};
@@ -336,6 +506,15 @@
 			buildConfigurations = (
 				CB036BDC2752E3EF004B85C4 /* Debug */,
 				CB036BDD2752E3EF004B85C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB036BEC2752E585004B85C4 /* Build configuration list for PBXNativeTarget "XPCServiceTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB036BED2752E585004B85C4 /* Debug */,
+				CB036BEE2752E585004B85C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
