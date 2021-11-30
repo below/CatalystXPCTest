@@ -14,7 +14,6 @@
 		CB036BE82752E584004B85C4 /* XPCServiceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CB036BE72752E584004B85C4 /* XPCServiceTest.m */; };
 		CB036BEA2752E585004B85C4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CB036BE92752E585004B85C4 /* main.m */; };
 		CB036BF02752E5B7004B85C4 /* XPCServiceTest.xpc in CopyFiles */ = {isa = PBXBuildFile; fileRef = CB036BE32752E584004B85C4 /* XPCServiceTest.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		CB036BF72752E72E004B85C4 /* ConnectionBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = CB036BF62752E72E004B85C4 /* ConnectionBridge.m */; };
 		CB036C052754E36A004B85C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB036C042754E36A004B85C4 /* Assets.xcassets */; };
 		CB036C082754E36A004B85C4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB036C072754E36A004B85C4 /* Preview Assets.xcassets */; };
 		CB036C0E2754E48F004B85C4 /* XPCTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB036BD02752E3EA004B85C4 /* XPCTestApp.swift */; };
@@ -22,6 +21,9 @@
 		CB036C132754E51A004B85C4 /* XPCServiceTest.xpc in CopyFiles */ = {isa = PBXBuildFile; fileRef = CB036BE32752E584004B85C4 /* XPCServiceTest.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		CB036C142754E557004B85C4 /* XPCConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB036BF82754DECC004B85C4 /* XPCConnector.swift */; };
 		CB036C152754F453004B85C4 /* XPCConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB036BF82754DECC004B85C4 /* XPCConnector.swift */; };
+		CB036C1D275636D6004B85C4 /* AVDeviceHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CB036C1C275636D6004B85C4 /* AVDeviceHelper.m */; };
+		CB036C1E275636D6004B85C4 /* AVDeviceHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CB036C1C275636D6004B85C4 /* AVDeviceHelper.m */; };
+		CB036C1F275636D6004B85C4 /* AVDeviceHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CB036C1C275636D6004B85C4 /* AVDeviceHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,13 +81,13 @@
 		CB036BEB2752E585004B85C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB036BF32752E62E004B85C4 /* XPCServiceTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XPCServiceTest.entitlements; sourceTree = "<group>"; };
 		CB036BF42752E72E004B85C4 /* CatalystXPCTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CatalystXPCTest-Bridging-Header.h"; sourceTree = "<group>"; };
-		CB036BF52752E72E004B85C4 /* ConnectionBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConnectionBridge.h; sourceTree = "<group>"; };
-		CB036BF62752E72E004B85C4 /* ConnectionBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConnectionBridge.m; sourceTree = "<group>"; };
 		CB036BF82754DECC004B85C4 /* XPCConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XPCConnector.swift; sourceTree = "<group>"; };
 		CB036BFE2754E364004B85C4 /* MacXPCTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacXPCTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB036C042754E36A004B85C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB036C072754E36A004B85C4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CB036C092754E36A004B85C4 /* MacXPCTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacXPCTest.entitlements; sourceTree = "<group>"; };
+		CB036C1B275636D6004B85C4 /* AVDeviceHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVDeviceHelper.h; sourceTree = "<group>"; };
+		CB036C1C275636D6004B85C4 /* AVDeviceHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AVDeviceHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,8 +140,6 @@
 			isa = PBXGroup;
 			children = (
 				CB036BDE2752E420004B85C4 /* CatalystXPCTest.entitlements */,
-				CB036BF52752E72E004B85C4 /* ConnectionBridge.h */,
-				CB036BF62752E72E004B85C4 /* ConnectionBridge.m */,
 				CB036BD42752E3EF004B85C4 /* Assets.xcassets */,
 				CB036BD62752E3EF004B85C4 /* Preview Content */,
 			);
@@ -191,6 +191,8 @@
 				CB036BD02752E3EA004B85C4 /* XPCTestApp.swift */,
 				CB036BD22752E3EA004B85C4 /* ContentView.swift */,
 				CB036BF82754DECC004B85C4 /* XPCConnector.swift */,
+				CB036C1B275636D6004B85C4 /* AVDeviceHelper.h */,
+				CB036C1C275636D6004B85C4 /* AVDeviceHelper.m */,
 				CB036BF42752E72E004B85C4 /* CatalystXPCTest-Bridging-Header.h */,
 			);
 			path = "Shared App";
@@ -330,8 +332,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB036BD32752E3EA004B85C4 /* ContentView.swift in Sources */,
-				CB036BF72752E72E004B85C4 /* ConnectionBridge.m in Sources */,
 				CB036BD12752E3EA004B85C4 /* XPCTestApp.swift in Sources */,
+				CB036C1D275636D6004B85C4 /* AVDeviceHelper.m in Sources */,
 				CB036C152754F453004B85C4 /* XPCConnector.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,6 +344,7 @@
 			files = (
 				CB036BEA2752E585004B85C4 /* main.m in Sources */,
 				CB036BE82752E584004B85C4 /* XPCServiceTest.m in Sources */,
+				CB036C1E275636D6004B85C4 /* AVDeviceHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,6 +354,7 @@
 			files = (
 				CB036C0F2754E48F004B85C4 /* ContentView.swift in Sources */,
 				CB036C0E2754E48F004B85C4 /* XPCTestApp.swift in Sources */,
+				CB036C1F275636D6004B85C4 /* AVDeviceHelper.m in Sources */,
 				CB036C142754E557004B85C4 /* XPCConnector.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

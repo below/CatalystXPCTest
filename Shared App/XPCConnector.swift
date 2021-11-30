@@ -11,6 +11,7 @@ func remoteObjectFactory() -> XPCServiceTestProtocol? {
     let myInterface = NSXPCInterface(with: XPCServiceTestProtocol.self)
 
     let myConnection = NSXPCConnection(serviceName: "com.vonbelow.xpcTest")
+// 'init(serviceName:)' is unavailable in Mac Catalyst
     myConnection.remoteObjectInterface = myInterface
     myConnection.resume()
     guard let remoteObject = myConnection.remoteObjectProxyWithErrorHandler({ error in

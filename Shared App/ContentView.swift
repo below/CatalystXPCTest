@@ -9,19 +9,37 @@ import SwiftUI
 
 struct ContentView: View {
     let remoteObject = remoteObjectFactory()
-    @State var deviceNames = ["Sample"]
+    @State var deviceNames = ["Loading …"]
     var body: some View {
-        VStack {
-            Button("Get Devices") {
-                remoteObject?.deviceNames({ names in
-                    if let names = names {
-                        self.deviceNames = names
-                    }
-                })
+        HStack(alignment: .top) {
+            VStack {
+                VStack {
+                    Text ("Devices seen by App")
+                    Text ("(Library Validation Endabled)")
+                        .font(.subheadline)
+                }
+                    .padding()
+                List(AVDeviceHelper.avDeviceNames(), id: \.self) { name in
+                    Text(name)
+                }
             }
-            .padding()
-            List(deviceNames, id: \.self) { name in
-                Text(name)
+            VStack {
+                VStack {
+                    Text ("Devices seen by XPC Service")
+                    Text ("(Library Validation Disabled)")
+                        .font(.subheadline)
+                }
+                .padding()
+                List(deviceNames, id: \.self) { name in
+                    Text(name)
+                }
+                .onAppear {
+                    remoteObject?.deviceNames({ names in
+                        if let names = names {
+                            self.deviceNames = names
+                        }
+                    })
+                }
             }
         }
     }
