@@ -12,7 +12,9 @@
 
 // Replace the API of this protocol with an API appropriate to the service you are vending.
 - (void)upperCaseString:(NSString *)aString withReply:(void (^)(NSString *))reply;
-    
+
+- (void) deviceNames:(void (^)(NSArray <NSString*> *))reply;
+
 @end
 
 /*

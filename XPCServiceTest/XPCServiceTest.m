@@ -6,6 +6,7 @@
 //
 
 #import "XPCServiceTest.h"
+#import "AVFoundation/AVFoundation.h"
 
 @implementation XPCServiceTest
 
@@ -15,4 +16,23 @@
     reply(response);
 }
 
+- (void) deviceNames:(void (^)(NSArray <NSString*> *))reply {
+    NSMutableArray <NSString*> * deviceNames = [NSMutableArray new];
+
+    NSArray *deviceTypes = @[
+        AVCaptureDeviceTypeBuiltInWideAngleCamera,
+        AVCaptureDeviceTypeExternalUnknown
+    ];
+    AVCaptureDeviceDiscoverySession *discoverySession = [AVCaptureDeviceDiscoverySession
+                                                            discoverySessionWithDeviceTypes:deviceTypes
+                                                                                  mediaType:AVMediaTypeVideo
+                                                                                   position:AVCaptureDevicePositionUnspecified];
+
+    for (AVCaptureDevice *device in discoverySession.devices)
+    {
+        [deviceNames addObject: device.localizedName];
+    }
+
+    reply(deviceNames);
+}
 @end

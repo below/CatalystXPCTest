@@ -9,21 +9,20 @@ import SwiftUI
 
 struct ContentView: View {
     let remoteObject = remoteObjectFactory()
-    @State var theString = ""
+    @State var deviceNames = ["Sample"]
     var body: some View {
         VStack {
-            TextField("Text", text: $theString)
-                .padding()
-            Button("Convert") {
-                remoteObject?.upperCaseString(theString, withReply: { reply in
-                    guard let result = reply else {
-                        debugPrint("No result")
-                        return
+            Button("Get Devices") {
+                remoteObject?.deviceNames({ names in
+                    if let names = names {
+                        self.deviceNames = names
                     }
-                    theString = result
                 })
             }
             .padding()
+            List(deviceNames, id: \.self) { name in
+                Text(name)
+            }
         }
     }
 }
